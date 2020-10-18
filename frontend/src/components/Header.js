@@ -24,8 +24,7 @@ const Header = () => {
               </Nav.Link>
               </LinkContainer>
             </Nav>
-          </Navbar.Collapse>
-          
+          </Navbar.Collapse>   
         </Container>
       </Navbar>
     </header>
