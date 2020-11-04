@@ -29,7 +29,12 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-paypal-button": "^4.1.1",
+    "react-paypal-button-v2": "^2.6.2",
+    "react-scripts": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
