@@ -31,4 +31,25 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-export { getProducts, getProductById };
+// @desc    Delete product by ID
+// @route   DELETE /api/products/:id
+// @access  Private/Admin
+const deleteProduct = asyncHandler(async (req, res) => {
+  if (mongoose.Types.ObjectId.isValid(req.params.id)) {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      await product.remove();
+      res.json({ message: "Product removed" });
+    } else {
+      res.status(404).json({
+        message: "Product not found",
+      });
+    }
+  } else {
+    res.status(404).json({
+      message: "Invalid ID. Product not found",
+    });
+  }
+});
+
+export { getProducts, getProductById, deleteProduct };
