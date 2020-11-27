@@ -82,12 +82,6 @@ const ProductScreen = ({ history, match }) => {
                 <ListGroup.Item>
                   <h2>{product.name}</h2>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} reviews`}
-                  />
-                </ListGroup.Item>
                 <ListGroup.Item>Price: ₱{product.price}</ListGroup.Item>
                 <ListGroup.Item>
                   Description: {product.description}
@@ -201,7 +195,7 @@ const ProductScreen = ({ history, match }) => {
                     </Form>
                   ) : (
                     <Message>
-                      Please <Link to='/login'>sign in</Link>to write a review{" "}
+                      Please <Link to='/login'> sign in </Link>to write a review{" "}
                     </Message>
                   )}
                 </ListGroup.Item>
